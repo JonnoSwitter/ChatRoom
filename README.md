@@ -31,7 +31,7 @@
 
 ## 环境依赖
 
-### Redis & MySQL (本地数据库)
+### Redis & MySQL (本地数据库)等
 <img width="467" height="239" alt="image" src="https://github.com/user-attachments/assets/b052054a-7ddb-496f-9d46-62bebf370153" />
 
 ### Node.js 环境
