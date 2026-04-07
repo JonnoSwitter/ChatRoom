@@ -12,10 +12,20 @@
 ---
 
 ## 后端框架
+1.用户邮箱注册验证服务：
 
-<img width="1774" height="671" alt="image" src="https://github.com/user-attachments/assets/61dbb433-95fc-45a5-bb4c-529ebe5af870" />
+<img width="728" height="323" alt="image" src="https://github.com/user-attachments/assets/f8b1a793-c346-49ce-af96-343602c7ad91" />
+
+调用逻辑图：
+<img width="1208" height="464" alt="image" src="https://github.com/user-attachments/assets/5da00925-16f0-4068-bf29-c8d6f58a392b" />
 
 &emsp;&emsp;在获取验证码服务框架中，客户端向网关服务器请求获取验证码，网关服务器接着向验证服务器发起验证请求，由验证服务器调用各大厂商提供的邮箱接口（QQ 邮箱、新浪邮箱等）发送验证码。验证服务器随后通知网关服务器验证码已发送，最后由网关服务器通知客户端注意查收。从客户端视角来看，整个流程似乎由网关服务器直接处理。`grpc`是各服务器之间的服务调用框架，因此需要在服务器中配置`grpc`。
+
+主要类的封装内容：
+
+<img width="776" height="556" alt="image" src="https://github.com/user-attachments/assets/7f41330c-8d9a-48e4-adaf-53f74ae1def6" />
+
+<img width="629" height="483" alt="image" src="https://github.com/user-attachments/assets/bdbb48a4-02bc-42b5-a1ff-72f9b8d51925" />
 
 &emsp;&emsp;目前本项目第一季已实现用户验证服务及前端界面切换等基础功能。通过本阶段开发，本人受益匪浅，学习到了一些重要的设计思想及分布式服务器通信的核心重点与难点。
 
